@@ -36,7 +36,6 @@ void print(List *list) {
         printf("List is Empty.\n");
         return;
     }
-
     Node *pointer = list->head;// Taking head value without change reference;
     printf("List: ");
     while (pointer != NULL) {
@@ -78,7 +77,6 @@ int indexOf(List *list, Node *node) {
         if (pointer != NULL)
             return index;
     }
-
     printf("Node not exists at list");
     return -1;
 }
@@ -94,14 +92,28 @@ void delete(List *list, int index) {
 
             free(current);
             list->size--;
+        }
+    }
+}
+
+void insert(List *list, int number, int index) {
+    if (index == 0) {
+        push(list, number);
+    } else {
+        Node *current = atPosition(list, index);
+        if (current != NULL) {
+            Node *previous = atPosition(list, index - 1);
+            Node *newNode = (Node *) malloc(sizeof(Node));
+            newNode->data = number;
+            previous->next = newNode;
+            newNode->next = current;
+            list->size++;
 
         }
-
     }
 }
 
 int main() {
-    Node *node = (Node *) malloc(sizeof(Node));
     List *list = createList();
     printf("%d\n", list->size);
     print(list);
@@ -109,13 +121,14 @@ int main() {
     push(list, 55);
     printf("%d \n", list->head->data);
 
-    push(list, 234);
-    push(list, 111);
-    push(list, 99);
-    print(list);
     delete(list, 0);
     print(list);
 
+    insert(list, 200, 2);
+    print(list);
+
+    insert(list, 89, 0);
+    print(list);
 }
 
 

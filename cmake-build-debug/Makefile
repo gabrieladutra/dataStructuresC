@@ -143,17 +143,17 @@ linkedLists/fast:
 .PHONY : linkedLists/fast
 
 #=============================================================================
-# Target rules for targets named linkedList
+# Target rules for targets named stack
 
 # Build rule for target.
-linkedList: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 linkedList
-.PHONY : linkedList
+stack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 stack
+.PHONY : stack
 
 # fast build rule for target.
-linkedList/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/build
-.PHONY : linkedList/fast
+stack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/build
+.PHONY : stack/fast
 
 src/linkedList.obj: src/linkedList.c.obj
 
@@ -188,7 +188,7 @@ src/stack.obj: src/stack.c.obj
 
 # target to build an object file
 src/stack.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/src/stack.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/src/stack.c.obj
 .PHONY : src/stack.c.obj
 
 src/stack.i: src/stack.c.i
@@ -197,7 +197,7 @@ src/stack.i: src/stack.c.i
 
 # target to preprocess a source file
 src/stack.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/src/stack.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/src/stack.c.i
 .PHONY : src/stack.c.i
 
 src/stack.s: src/stack.c.s
@@ -206,7 +206,7 @@ src/stack.s: src/stack.c.s
 
 # target to generate assembly for a file
 src/stack.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/src/stack.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/src/stack.c.s
 .PHONY : src/stack.c.s
 
 # Help Target
@@ -217,8 +217,8 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... linkedList
 	@echo ... linkedLists
+	@echo ... stack
 	@echo ... src/linkedList.obj
 	@echo ... src/linkedList.i
 	@echo ... src/linkedList.s

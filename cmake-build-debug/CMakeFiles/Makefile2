@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/linkedLists.dir/all
-all: CMakeFiles/linkedList.dir/all
+all: CMakeFiles/stack.dir/all
 
 .PHONY : all
 
@@ -84,7 +84,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/linkedLists.dir/clean
-clean: CMakeFiles/linkedList.dir/clean
+clean: CMakeFiles/stack.dir/clean
 
 .PHONY : clean
 
@@ -95,7 +95,7 @@ clean: CMakeFiles/linkedList.dir/clean
 CMakeFiles/linkedLists.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target linkedLists"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target linkedLists"
 .PHONY : CMakeFiles/linkedLists.dir/all
 
 # Build rule for subdir invocation for target.
@@ -116,31 +116,31 @@ CMakeFiles/linkedLists.dir/clean:
 .PHONY : CMakeFiles/linkedLists.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/linkedList.dir
+# Target rules for target CMakeFiles/stack.dir
 
 # All Build rule for target.
-CMakeFiles/linkedList.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target linkedList"
-.PHONY : CMakeFiles/linkedList.dir/all
+CMakeFiles/stack.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target stack"
+.PHONY : CMakeFiles/stack.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/linkedList.dir/rule: cmake_check_build_system
+CMakeFiles/stack.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/linkedList.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/stack.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/linkedList.dir/rule
+.PHONY : CMakeFiles/stack.dir/rule
 
 # Convenience name for target.
-linkedList: CMakeFiles/linkedList.dir/rule
+stack: CMakeFiles/stack.dir/rule
 
-.PHONY : linkedList
+.PHONY : stack
 
 # clean rule for target.
-CMakeFiles/linkedList.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/clean
-.PHONY : CMakeFiles/linkedList.dir/clean
+CMakeFiles/stack.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\stack.dir\build.make CMakeFiles/stack.dir/clean
+.PHONY : CMakeFiles/stack.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

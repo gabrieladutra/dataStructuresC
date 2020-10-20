@@ -5,4 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 
 add_executable(linkedLists src/linkedList.c)
-add_executable(linkedList src/stack.c)
+add_executable(stack src/stack.c)
