@@ -1,66 +1,74 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct Node {
     int data;
     struct Node *next;
 } Node;
-struct Node *head;
 
 
-void insertAtBeginning(int number) {
-    Node *temp = (Node *) malloc(sizeof(Node));
-    temp->data = number;
-    temp->next = head;
-    head = temp;
+typedef struct List {
+    int size;
+    Node *head;
+} List;
 
+List *createList() {
+    List *list = (List *) malloc(sizeof(List)); //Referencing a variable to point to List
+    list->size = 0; // Initializing  a list size
+    list->head = NULL; // When list is empty
 }
 
-void printList() {
-    Node *temp = head;
-    printf("List is: ");
-    while (temp != NULL) {
-        printf(" %d ", temp->data);
-        temp = temp->next;
-    }
+void push(List *list, int number) {
+    Node *node = (Node *) malloc(sizeof(Node)); //Referencing a variable to point to Node
+    node->data = number; // Assigning value to node
+    node->next = list->head; // Making node point to List(head), in this case point to null
+    list->head = node;// Head now point to node;
+    list->size++; // Incrementing list size
 }
-void insertAtPosition (int data, int position) {
-    struct Node* tempNode = malloc(sizeof(struct Node));
 
-    tempNode->data = data;
-    tempNode->next = NULL;
-
-    if (position == 1) {
-        tempNode->next = head;
-        head = tempNode;
+bool isEmpty(List *list) {
+    return list->size == 0;
+}
+void print(List *list) {
+    if(isEmpty(list)){
+        printf("List is Empty.\n");
         return;
     }
 
-    struct Node* previousNode = head;
-    for (int i = 0; i < position - 2; i++) {
-        previousNode = previousNode->next;
+    Node *pointer = list->head;// Taking head value without change reference;
+    printf("List: ");
+    while (pointer != NULL) {
+        printf(" %d ", pointer->data);
+        pointer = pointer->next; // Taking next value to print
     }
-
-    tempNode->next = previousNode->next;
-    previousNode->next = tempNode;
+    printf("\n");
 }
-int main() {
-    head = NULL;
-    printf("How many numbers? \n");
-    int n, x;
-    scanf("%d", &n);
 
-    for (int i = 0; i < n; i++) {
-        printf("\n Enter the number \n");
-        scanf("%d", &x);
-        insertAtBeginning(x);
-        printList();
+void pop(List *list) {
+    if(!isEmpty(list)){
+        Node* pointer = list->head; // Auxiliary pointer to change head value to next node value;
+        list->head = pointer->next;
+        free(pointer);
+        list->size--;
     }
+}
 
-    insertAtPosition(123,4);
-    printList();
+int main() {
+    List *list = createList();
+    printf("%d\n", list->size);
+    print(list);
 
-    return 0;
+    push(list, 55);
+    printf("%d \n", list->head->data);
+
+    push(list, 234);
+    push(list, 111);
+    print(list);
+    pop(list);
+    print(list);
+
+
 }
 
 
