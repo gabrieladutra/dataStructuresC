@@ -24,7 +24,26 @@ void printList() {
         temp = temp->next;
     }
 }
+void insertAtPosition (int data, int position) {
+    struct Node* tempNode = malloc(sizeof(struct Node));
 
+    tempNode->data = data;
+    tempNode->next = NULL;
+
+    if (position == 1) {
+        tempNode->next = head;
+        head = tempNode;
+        return;
+    }
+
+    struct Node* previousNode = head;
+    for (int i = 0; i < position - 2; i++) {
+        previousNode = previousNode->next;
+    }
+
+    tempNode->next = previousNode->next;
+    previousNode->next = tempNode;
+}
 int main() {
     head = NULL;
     printf("How many numbers? \n");
@@ -37,6 +56,10 @@ int main() {
         insertAtBeginning(x);
         printList();
     }
+
+    insertAtPosition(123,4);
+    printList();
+
     return 0;
 }
 
