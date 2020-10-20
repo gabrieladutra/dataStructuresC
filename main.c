@@ -30,8 +30,9 @@ void push(List *list, int number) {
 bool isEmpty(List *list) {
     return list->size == 0;
 }
+
 void print(List *list) {
-    if(isEmpty(list)){
+    if (isEmpty(list)) {
         printf("List is Empty.\n");
         return;
     }
@@ -46,15 +47,61 @@ void print(List *list) {
 }
 
 void pop(List *list) {
-    if(!isEmpty(list)){
-        Node* pointer = list->head; // Auxiliary pointer to change head value to next node value;
+    if (!isEmpty(list)) {
+        Node *pointer = list->head; // Auxiliary pointer to change head value to next node value;
         list->head = pointer->next;
         free(pointer);
         list->size--;
     }
 }
 
+Node *atPosition(List *list, int index) {
+    if (index >= 0 && index < list->size) {
+        Node *node = list->head; // Taking head value without change reference;
+        for (int i = 0; i < index; i++) {
+            node = node->next;
+        }
+        return node;
+    }
+    return NULL;
+}
+
+int indexOf(List *list, Node *node) {
+    if (node != NULL) {
+        Node *pointer = list->head;
+
+        int index = 0;
+        while (pointer != node && pointer != NULL) {
+            pointer = pointer->next;
+            index++;
+        }
+        if (pointer != NULL)
+            return index;
+    }
+
+    printf("Node not exists at list");
+    return -1;
+}
+
+void delete(List *list, int index) {
+    if (index == 0) {
+        pop(list);
+    } else {
+        Node *current = (Node *) atPosition(list, index);
+        if (current != NULL) {
+            Node *previousNode = (Node *) atPosition(list, index - 1);
+            previousNode->next = current->next;
+
+            free(current);
+            list->size--;
+
+        }
+
+    }
+}
+
 int main() {
+    Node *node = (Node *) malloc(sizeof(Node));
     List *list = createList();
     printf("%d\n", list->size);
     print(list);
@@ -64,10 +111,10 @@ int main() {
 
     push(list, 234);
     push(list, 111);
+    push(list, 99);
     print(list);
-    pop(list);
+    delete(list, 0);
     print(list);
-
 
 }
 
