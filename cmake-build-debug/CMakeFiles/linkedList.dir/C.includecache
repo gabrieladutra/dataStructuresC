@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Users/gabi/CLionProjects/linkedLists/src/linkedList.c
+D:/Users/gabi/CLionProjects/linkedLists/array.c
 stdio.h
--
-stdlib.h
--
-stdbool.h
 -
 

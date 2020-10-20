@@ -142,32 +142,72 @@ linkedLists/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/build
 .PHONY : linkedLists/fast
 
-main.obj: main.c.obj
+#=============================================================================
+# Target rules for targets named linkedList
 
-.PHONY : main.obj
+# Build rule for target.
+linkedList: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 linkedList
+.PHONY : linkedList
+
+# fast build rule for target.
+linkedList/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/build
+.PHONY : linkedList/fast
+
+src/linkedList.obj: src/linkedList.c.obj
+
+.PHONY : src/linkedList.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/main.c.obj
-.PHONY : main.c.obj
+src/linkedList.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/src/linkedList.c.obj
+.PHONY : src/linkedList.c.obj
 
-main.i: main.c.i
+src/linkedList.i: src/linkedList.c.i
 
-.PHONY : main.i
+.PHONY : src/linkedList.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/main.c.i
-.PHONY : main.c.i
+src/linkedList.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/src/linkedList.c.i
+.PHONY : src/linkedList.c.i
 
-main.s: main.c.s
+src/linkedList.s: src/linkedList.c.s
 
-.PHONY : main.s
+.PHONY : src/linkedList.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/main.c.s
-.PHONY : main.c.s
+src/linkedList.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedLists.dir\build.make CMakeFiles/linkedLists.dir/src/linkedList.c.s
+.PHONY : src/linkedList.c.s
+
+src/stack.obj: src/stack.c.obj
+
+.PHONY : src/stack.obj
+
+# target to build an object file
+src/stack.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/src/stack.c.obj
+.PHONY : src/stack.c.obj
+
+src/stack.i: src/stack.c.i
+
+.PHONY : src/stack.i
+
+# target to preprocess a source file
+src/stack.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/src/stack.c.i
+.PHONY : src/stack.c.i
+
+src/stack.s: src/stack.c.s
+
+.PHONY : src/stack.s
+
+# target to generate assembly for a file
+src/stack.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\linkedList.dir\build.make CMakeFiles/linkedList.dir/src/stack.c.s
+.PHONY : src/stack.c.s
 
 # Help Target
 help:
@@ -177,10 +217,14 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... linkedList
 	@echo ... linkedLists
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/linkedList.obj
+	@echo ... src/linkedList.i
+	@echo ... src/linkedList.s
+	@echo ... src/stack.obj
+	@echo ... src/stack.i
+	@echo ... src/stack.s
 .PHONY : help
 
 

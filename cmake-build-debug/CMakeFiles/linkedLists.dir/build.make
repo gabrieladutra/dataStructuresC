@@ -76,27 +76,27 @@ include CMakeFiles/linkedLists.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/linkedLists.dir/flags.make
 
-CMakeFiles/linkedLists.dir/main.c.obj: CMakeFiles/linkedLists.dir/flags.make
-CMakeFiles/linkedLists.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/linkedLists.dir/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\linkedLists.dir\main.c.obj   -c D:\Users\gabi\CLionProjects\linkedLists\main.c
+CMakeFiles/linkedLists.dir/src/linkedList.c.obj: CMakeFiles/linkedLists.dir/flags.make
+CMakeFiles/linkedLists.dir/src/linkedList.c.obj: ../src/linkedList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Users\gabi\CLionProjects\linkedLists\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/linkedLists.dir/src/linkedList.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\linkedLists.dir\src\linkedList.c.obj   -c D:\Users\gabi\CLionProjects\linkedLists\src\linkedList.c
 
-CMakeFiles/linkedLists.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/linkedLists.dir/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Users\gabi\CLionProjects\linkedLists\main.c > CMakeFiles\linkedLists.dir\main.c.i
+CMakeFiles/linkedLists.dir/src/linkedList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/linkedLists.dir/src/linkedList.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Users\gabi\CLionProjects\linkedLists\src\linkedList.c > CMakeFiles\linkedLists.dir\src\linkedList.c.i
 
-CMakeFiles/linkedLists.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/linkedLists.dir/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Users\gabi\CLionProjects\linkedLists\main.c -o CMakeFiles\linkedLists.dir\main.c.s
+CMakeFiles/linkedLists.dir/src/linkedList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/linkedLists.dir/src/linkedList.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Users\gabi\CLionProjects\linkedLists\src\linkedList.c -o CMakeFiles\linkedLists.dir\src\linkedList.c.s
 
 # Object files for target linkedLists
 linkedLists_OBJECTS = \
-"CMakeFiles/linkedLists.dir/main.c.obj"
+"CMakeFiles/linkedLists.dir/src/linkedList.c.obj"
 
 # External object files for target linkedLists
 linkedLists_EXTERNAL_OBJECTS =
 
-linkedLists.exe: CMakeFiles/linkedLists.dir/main.c.obj
+linkedLists.exe: CMakeFiles/linkedLists.dir/src/linkedList.c.obj
 linkedLists.exe: CMakeFiles/linkedLists.dir/build.make
 linkedLists.exe: CMakeFiles/linkedLists.dir/linklibs.rsp
 linkedLists.exe: CMakeFiles/linkedLists.dir/objects1.rsp

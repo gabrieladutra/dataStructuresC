@@ -3,4 +3,6 @@ project(linkedLists C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(linkedLists main.c)
+
+add_executable(linkedLists src/linkedList.c)
+add_executable(linkedList src/stack.c)
